@@ -11,5 +11,10 @@
     <string name="d6Button">D6</string>
     <string name="d4Button">D4</string>
     <string name="clearButton">CLEAR</string>
+    <string name="charButton">CHARACTER</string>
+    <string name="title_activity_char">CharActivity</string>
+    <string name="dummy_section_text">Section %1d is just a dummy section.</string>
+
+    <string name="hello_world">Hello world!</string>
 
 </resources>

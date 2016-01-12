@@ -1,5 +1,6 @@
 package com.meyamokevin.natural20;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -8,7 +9,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+
 import java.util.Random;
+import android.support.v4.view.ViewPager;
 
 
 public class MainActivity extends ActionBarActivity implements View.OnClickListener {
@@ -22,6 +25,7 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
     Button d6Button;
     Button d4Button;
     Button clearButton;
+    Button charButton;
 
 
     @Override
@@ -56,6 +60,9 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         clearButton = (Button) findViewById(R.id.clear_button);
         clearButton.setOnClickListener(this);
+
+        charButton = (Button) findViewById(R.id.char_button);
+        charButton.setOnClickListener(this);
     }
 
 
@@ -98,6 +105,10 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
             case R.id.clear_button:
                 resultView.setText("");
                 break;
+
+            case R.id.char_button:
+                Intent intent = new Intent(this, CharActivity.class);
+                startActivity(intent);
         }
     }
 
@@ -113,4 +124,6 @@ public class MainActivity extends ActionBarActivity implements View.OnClickListe
 
         return randomNum;
     }
+
+
 }
